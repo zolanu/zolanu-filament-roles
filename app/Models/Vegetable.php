@@ -9,4 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Vegetable extends Model
 {
     use HasFactory, SoftDeletes;
+
+    public function default_measurement_unit()
+    {
+        return $this->belongsTo(MeasurementUnit::class, 'default_measurement_unit_id');
+    }
 }
