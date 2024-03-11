@@ -9,4 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Farmer extends Model
 {
     use HasFactory, SoftDeletes;
+
+    public function thlai_thars()
+    {
+        return $this->hasMany(ThlaiThar::class);
+    }
 }
