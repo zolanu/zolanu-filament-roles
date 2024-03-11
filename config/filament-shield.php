@@ -23,9 +23,14 @@ return [
         'intercept_gate' => 'before', // after
     ],
 
-    'panel_user' => [
+    'district_council' => [
         'enabled' => true,
-        'name' => 'panel_user',
+        'name' => 'district_council',
+    ],
+
+    'local_council' => [
+        'enabled' => true,
+        'name' => 'local_council',
     ],
 
     'permission_prefixes' => [
