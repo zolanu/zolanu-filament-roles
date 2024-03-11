@@ -41,9 +41,8 @@ class VegetableResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('default_measurement_unit_id')
-                    ->numeric()
-                    ->sortable(),
+                Tables\Columns\TextColumn::make('default_measurement_unit.name'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
