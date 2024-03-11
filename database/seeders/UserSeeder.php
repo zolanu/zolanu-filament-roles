@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         $users = [];
         foreach ($districts as $district) {
             array_push($users,  [
-                'name' => $district->name,
+                'name' => $district->name . ' DC',
                 'email' => strtolower($district->name) . '@example.email',
                 'district_id' => $district->id,
                 'password' => bcrypt(strtolower($district->name) . '@example.email'),
