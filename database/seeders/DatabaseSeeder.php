@@ -22,5 +22,12 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@example.email',
             'password' => bcrypt('admin@example.email')
         ]);
+
+        $this->call([
+            DistrictSeeder::class,
+            MeasurementUnitSeeder::class,
+            UserSeeder::class,
+            VegetableSeeder::class,
+        ]);
     }
 }
