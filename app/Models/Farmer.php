@@ -14,4 +14,9 @@ class Farmer extends Model
     {
         return $this->hasMany(ThlaiThar::class);
     }
+
+    public function district()
+    {
+        return $this->belongsTo(District::class);
+    }
 }
