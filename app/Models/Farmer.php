@@ -19,4 +19,9 @@ class Farmer extends Model
     {
         return $this->belongsTo(District::class);
     }
+
+    public function village_council()
+    {
+        return $this->belongsTo(User::class, 'vc_id');
+    }
 }
