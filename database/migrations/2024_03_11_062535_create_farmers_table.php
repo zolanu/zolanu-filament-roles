@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\District;
+use App\Models\User;
 use App\Models\VillageCouncil;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -23,7 +24,7 @@ return new class extends Migration
             $table->string('longitude')->nullable();
             $table->string('ip')->nullable();
             $table->foreignIdFor(District::class)->nullable();
-            $table->foreignIdFor(VillageCouncil::class)->nullable();
+            $table->foreignIdFor(User::class, 'vc_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
