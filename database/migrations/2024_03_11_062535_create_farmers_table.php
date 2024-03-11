@@ -24,6 +24,7 @@ return new class extends Migration
             $table->foreignIdFor(District::class)->nullable();
             $table->foreignIdFor(VillageCouncil::class)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

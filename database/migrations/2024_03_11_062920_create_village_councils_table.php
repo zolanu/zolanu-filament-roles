@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->foreignIdFor(District::class);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->foreignIdFor(MeasurementUnit::class, 'default_measurement_unit_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
