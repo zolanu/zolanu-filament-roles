@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Models\Vegetable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,5 +21,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('vegetables', function () {
-    return Vegetable::all();
+    User::create([
+        'name' => 'second',
+        'email' => 'second@example.email',
+        'password' => 'default value',
+    ]);
+    // return Vegetable::all();
 });

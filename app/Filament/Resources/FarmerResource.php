@@ -3,9 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\FarmerResource\Pages;
-use App\Filament\Resources\FarmerResource\RelationManagers;
 use App\Models\Farmer;
-use Filament\Forms;
 use Filament\Forms\Components\Grid;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
@@ -21,6 +19,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class FarmerResource extends Resource
 {
     protected static ?string $model = Farmer::class;
+    protected static ?string $name = 'Title';
     protected static ?string $navigationLabel = 'Thlai Thar';
 
 
@@ -29,6 +28,7 @@ class FarmerResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
+
             ->schema([
                 TextInput::make('name')
                     ->required(),
