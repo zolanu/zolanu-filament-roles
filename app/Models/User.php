@@ -55,4 +55,9 @@ class User extends Authenticatable
     {
         return true;
     }
+
+    public function district()
+    {
+        return $this->belongsTo(District::class);
+    }
 }
