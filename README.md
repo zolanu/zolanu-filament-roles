@@ -3,10 +3,15 @@
 
   ```
 php artisan migrate --seed
-php artisan shield:super-admin
+php artisan shield:super-admin --user=1
 php artisan shield:generate --all
 ```
-
+### OR
+  ```
+php artisan migrate:fresh --seed
+php artisan shield:super-admin --user=1
+php artisan shield:generate --all
+```
   
 ## Requirements
 - PHP 8.2
