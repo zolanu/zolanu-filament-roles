@@ -93,7 +93,7 @@ class UserResource extends Resource
     public static function getRelations(): array
     {
         return [
-            AuditsRelationManager::class,
+            AuditsRelationManager::class
         ];
     }
 
