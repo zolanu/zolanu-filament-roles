@@ -7,6 +7,7 @@ namespace App\Models;
 use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 use BezhanSalleh\FilamentShield\Traits\HasPanelShield;
 use BezhanSalleh\FilamentShield\Traits\HasWidgetShield;
+use Filament\Models\Contracts\FilamentUser;
 use Filament\Panel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -16,7 +17,7 @@ use Laravel\Sanctum\HasApiTokens;
 use OwenIt\Auditing\Contracts\Auditable;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements Auditable
+class User extends Authenticatable implements Auditable, FilamentUser
 {
     use \OwenIt\Auditing\Auditable;
     use HasApiTokens, HasFactory, Notifiable, HasRoles, HasPanelShield, SoftDeletes;
